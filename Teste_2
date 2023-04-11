@@ -1,0 +1,28 @@
+//Código em Java para identificar se um número dito pertence a sequência Fibonacci ou não
+
+import java.util.*;
+
+public class testes {
+
+	static boolean PerfectSquare(int x)
+    {
+       int s = (int) Math.sqrt(x); 
+       return (s*s == x);
+     }
+  
+   static boolean Fibonacci(int x)
+      {
+         return PerfectSquare(5*x*x + 4) || PerfectSquare(5*x*x - 4);
+     }
+
+    public static void main(String[] args)
+    {   
+      Scanner scan = new Scanner(System.in);
+      System.out.print("Escolha um número: ");
+      int n = scan.nextInt();	       
+	  if (n>0)
+		{	
+		 System.out.println("Esse número faz parte da sequência Fibonacci? " + Fibonacci(n)); 
+		}         
+   }
+}
